@@ -12,7 +12,7 @@ class VICREGWrapper(gym.Wrapper):
         self.resnet = torch.hub.load('pytorch/vision:v0.10.0','resnet18',pretrained=False)
         DATA_PATH = pkg_resources.resource_filename('vicregdonkey', '/')
         model_name="resnet18.pth"
-        self.resnet.load_state_dict(torch.load(DATA_PATH+model_name))
+        self.resnet.load_state_dict(torch.load(DATA_PATH+model_name, map_location=torch.device('cpu')))
         self.resnet.eval()
         #self.resnet.cuda()
         self.data_transforms = TrainTransform()
