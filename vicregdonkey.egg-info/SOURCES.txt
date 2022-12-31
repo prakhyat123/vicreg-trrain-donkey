@@ -1,0 +1,9 @@
+setup.py
+vicregdonkey/__init__.py
+vicregdonkey/augmentations.py
+vicregdonkey/wrapper.py
+vicregdonkey.egg-info/PKG-INFO
+vicregdonkey.egg-info/SOURCES.txt
+vicregdonkey.egg-info/dependency_links.txt
+vicregdonkey.egg-info/requires.txt
+vicregdonkey.egg-info/top_level.txt
