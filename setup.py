@@ -15,7 +15,7 @@ setup(
     license="MIT",
     version="0.1.0",
     python_requires=">=3.7",
-    package_data={'': ['*.pth']}
+    package_data={'': ['*.pth']},
     # PyPI package information.
     classifiers=[
         "Programming Language :: Python :: 3",
