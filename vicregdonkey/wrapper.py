@@ -28,12 +28,12 @@ class VICREGWrapper(gym.Wrapper):
         # Encode with the pre-trained VICREG
         obs = self.data_transforms(obs).unsqueeze(0)
         with torch.no_grad():       
-            encoded_image = self.resnet(obs).cpu()
+            encoded_image = self.resnet(obs)
         return encoded_image, reward, done, infos
 
     def reset(self) -> np.ndarray:
         obs = self.env.reset()
         obs = self.data_transforms(obs).unsqueeze(0)
         with torch.no_grad():
-            encoded_image = self.resnet(obs).cpu()
+            encoded_image = self.resnet(obs)
         return encoded_image
